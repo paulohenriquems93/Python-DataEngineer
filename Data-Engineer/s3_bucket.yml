@@ -8,4 +8,4 @@ Resources: #obrigatorio criar a chave chamada Resources
       BucketEncryption:
          ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
-              SSEAlgorithm: AES256  #criacao do bucket no s3
+              SSEAlgorithm: AES256  #criacao do bucket no s3 da Amazon
