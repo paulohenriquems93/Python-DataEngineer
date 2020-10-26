@@ -13,7 +13,7 @@ Resources:
       ClusterSubnetGroupName: !Ref RedshiftSubnetGroup
       VpcSecurityGroupIds:
         - !Ref RedshiftEC2SecurityGroup
-      ClusterType: multi-node
+      ClusterType: multi-node # se for single node o number of nodes devera ser 1
       DBName: production
       Encrypted: true
       MasterUsername: admin

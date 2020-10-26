@@ -7,7 +7,7 @@ Resources:
     Properties:
       Name: kinesis-stream
       RetentionPeriodHours: 24 #retem os dados que chegam  por 24 horas, depois de 24 horas pode deletar
-      ShardCount: 1 #numero de maquinas disponiveis
+      ShardCount: 1 #numero de maquinas disponiveis para acessar
       StreamEncryption:
         EncryptionType: KMS
         KeyId: alias/aws/kinesis
