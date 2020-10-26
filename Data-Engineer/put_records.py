@@ -1,7 +1,10 @@
 
 #Python Library
 import boto3
-import jsonfrom fake_web_events import Simulation
+import json
+import fake_web_events
+
+from fake_web_events import Simulation
 
 client = boto3.client('kinesis')
 
@@ -10,12 +13,12 @@ def put_record(event):
     response = client.put_record(
         StreamName='kinisis-stream',
         Data=data,
-        Partitionkey-'test'
+        PartitionKey='test'
     )
     return response
 
-simulation = Simulation(user_pool_size=200,sessions_per_day=10000)
-events = simulation.run(duration_seconds=300)
+simulation = Simulation(user_pool_size=300,sessions_per_day=15000)
+events = simulation.run(duration_seconds=600)
 
 for event in events:
     put_record(event)
