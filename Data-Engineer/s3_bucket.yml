@@ -1,0 +1,11 @@
+Resources: #obrigatorio criar a chave chamada Resources
+
+  BucketdoPauloHenrique:
+
+    Type: AWS::S3::Bucket #obrigatorio
+    Properties:
+      BucketName: bucket-do-paulo-e-da-amalia   #dentro de propriedade deve ser unico na aws, consegue armazenar qualquer tipo de arquivo em um bucket
+      BucketEncryption:
+         ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256  #criacao do bucket
